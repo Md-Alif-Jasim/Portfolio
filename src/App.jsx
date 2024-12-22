@@ -17,7 +17,7 @@ const App = () => {
 
         <Programs/>
         <About/>
-        <Title subtitle="Galerry" title="Campus Photos"/>
+        <Title subtitle="Gallery" title="Campus Photos"/>
 
       </div>
       
