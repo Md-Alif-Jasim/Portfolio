@@ -1,0 +1,60 @@
+.program {
+    flex-basis: 31%;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .program img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth zoom and highlight effect */
+  }
+  
+  .caption {
+    border-radius: 10px;
+    position: absolute;
+    top: 0; /* Cover the entire image */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex; /* Flexbox to center content */
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    background: rgba(0, 15, 152, 0.5); /* Semi-transparent overlay */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+    color: white; /* Text color */
+    pointer-events: none; /* Disable interaction when hidden */
+  }
+  
+  .caption img {
+    width: 60px; /* Size of the icon */
+    height: auto;
+    margin-bottom: 10px;
+    transform: scale(1); /* Normal size */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+  }
+  
+  .caption p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  /* Hover Effects */
+  .program:hover .caption {
+    opacity: 1; /* Show the overlay with icon and text */
+    pointer-events: auto; /* Allow interaction */
+  }
+  
+  .program:hover img {
+    transform: scale(1.1); /* Slight zoom-in effect */
+    filter: brightness(0.7); /* Darken the image to make the overlay stand out */
+  }
+  
+  .program:hover .caption img {
+    transform: scale(1.2); /* Highlight and zoom in the icon */
+  }
+  
